@@ -1,0 +1,29 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/main.dart", "Dart", 126, 11, 13, 150
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_bloc.dart", "Dart", 64, 3, 9, 76
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_event.dart", "Dart", 16, 0, 10, 26
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_state.dart", "Dart", 21, 0, 12, 33
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_bloc.dart", "Dart", 23, 0, 2, 25
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_event.dart", "Dart", 2, 0, 2, 4
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_state.dart", "Dart", 13, 0, 8, 21
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/constants/const.dart", "Dart", 56, 3, 13, 72
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/local/city_local_data_source.dart", "Dart", 36, 0, 6, 42
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/city_model.dart", "Dart", 25, 1, 9, 35
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/city_model.g.dart", "Dart", 42, 4, 8, 54
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/forecast_model.dart", "Dart", 22, 0, 4, 26
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/weather_model.dart", "Dart", 15, 0, 3, 18
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/remote/city_remote_data_source.dart", "Dart", 41, 1, 3, 45
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/remote/forecast_remote_data_source.dart", "Dart", 59, 0, 5, 64
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/repository/city_repository.dart", "Dart", 52, 2, 10, 64
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/repository/forecast_repository.dart", "Dart", 46, 11, 7, 64
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/home_screen.dart", "Dart", 398, 2, 17, 417
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/search_screen.dart", "Dart", 217, 1, 10, 228
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/splash_screen.dart", "Dart", 41, 0, 3, 44
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/api_exception.dart", "Dart", 5, 0, 2, 7
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/di.dart", "Dart", 59, 13, 14, 86
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/extensions/double_extensions.dart", "Dart", 8, 0, 2, 10
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/extensions/int_extensions.dart", "Dart", 8, 0, 4, 12
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/cached_icon.dart", "Dart", 33, 0, 3, 36
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/search_box.dart", "Dart", 66, 1, 6, 73
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/slide_animation.dart", "Dart", 36, 0, 6, 42
+"Total", "-", 1530, 53, 191, 1774

@@ -1,0 +1,23 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/main.dart", "Dart", 56, 0, 6, 62
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_bloc.dart", "Dart", 0, 0, 1, 1
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_event.dart", "Dart", 0, 0, 1, 1
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_state.dart", "Dart", 0, 0, 2, 2
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/constants/const.dart", "Dart", 15, 0, 4, 19
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/datasource/city_datasource.dart", "Dart", 3, 0, 3, 6
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/city_model.dart", "Dart", 25, 1, 9, 35
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/city_model.g.dart", "Dart", 42, 4, 8, 54
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/forecast_model.dart", "Dart", 23, 0, 4, 27
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/weather_model.dart", "Dart", 15, 0, 3, 18
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/repository/city_repository.dart", "Dart", 0, 0, 1, 1
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/home_screen.dart", "Dart", 286, 3, 18, 307
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/search_screen.dart", "Dart", 134, 0, 7, 141
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/services/openweather/geo_coding_api.dart", "Dart", 36, 0, 2, 38
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/services/openweather/weather_forecast_api.dart", "Dart", 51, 5, 6, 62
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/di.dart", "Dart", 48, 13, 12, 73
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/extensions/double_extensions.dart", "Dart", 8, 0, 2, 10
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/extensions/int_extensions.dart", "Dart", 8, 0, 4, 12
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/cached_icon.dart", "Dart", 26, 0, 3, 29
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/search_box.dart", "Dart", 102, 5, 9, 116
+"/Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/slide_animation.dart", "Dart", 36, 0, 6, 42
+"Total", "-", 914, 31, 111, 1056

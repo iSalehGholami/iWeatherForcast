@@ -1,0 +1,65 @@
+Date : 2024-01-06 06:15:03
+Directory : /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib
+Total : 24 files,  616 codes, 22 comments, 80 blanks, all 718 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         24 |        616 |         22 |         80 |        718 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                        | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                           |         24 |        616 |         22 |         80 |        718 |
+| . (Files)                                                                                                                                   |          1 |         70 |         11 |          7 |         88 |
+| src                                                                                                                                         |         23 |        546 |         11 |         73 |        630 |
+| src/bloc                                                                                                                                    |          6 |        139 |          3 |         39 |        181 |
+| src/bloc/city                                                                                                                               |          3 |        101 |          3 |         27 |        131 |
+| src/bloc/forecast                                                                                                                           |          3 |         38 |          0 |         12 |         50 |
+| src/constants                                                                                                                               |          1 |         41 |          3 |          9 |         53 |
+| src/data                                                                                                                                    |          7 |        230 |         14 |         27 |        271 |
+| src/data/datasource                                                                                                                         |          1 |         -3 |          0 |         -3 |         -6 |
+| src/data/local                                                                                                                              |          1 |         36 |          0 |          6 |         42 |
+| src/data/models                                                                                                                             |          1 |         -1 |          0 |          0 |         -1 |
+| src/data/remote                                                                                                                             |          2 |        100 |          1 |          8 |        109 |
+| src/data/repository                                                                                                                         |          2 |         98 |         13 |         16 |        127 |
+| src/screens                                                                                                                                 |          3 |        236 |          0 |          5 |        241 |
+| src/services                                                                                                                                |          2 |        -87 |         -5 |         -8 |       -100 |
+| src/services/openweather                                                                                                                    |          2 |        -87 |         -5 |         -8 |       -100 |
+| src/utils                                                                                                                                   |          2 |         16 |          0 |          4 |         20 |
+| src/widgets                                                                                                                                 |          2 |        -29 |         -4 |         -3 |        -36 |
++---------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                                    | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/main.dart                                          | Dart     |         70 |         11 |          7 |         88 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_bloc.dart                       | Dart     |         64 |          3 |          8 |         75 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_event.dart                      | Dart     |         16 |          0 |          9 |         25 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/city/city_state.dart                      | Dart     |         21 |          0 |         10 |         31 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_bloc.dart               | Dart     |         23 |          0 |          2 |         25 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_event.dart              | Dart     |          2 |          0 |          2 |          4 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/bloc/forecast/forecast_state.dart              | Dart     |         13 |          0 |          8 |         21 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/constants/const.dart                           | Dart     |         41 |          3 |          9 |         53 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/datasource/city_datasource.dart           | Dart     |         -3 |          0 |         -3 |         -6 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/local/city_local_data_source.dart         | Dart     |         36 |          0 |          6 |         42 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/models/forecast_model.dart                | Dart     |         -1 |          0 |          0 |         -1 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/remote/city_remote_data_source.dart       | Dart     |         41 |          1 |          3 |         45 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/remote/forecast_remote_data_source.dart   | Dart     |         59 |          0 |          5 |         64 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/repository/city_repository.dart           | Dart     |         52 |          2 |          9 |         63 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/data/repository/forecast_repository.dart       | Dart     |         46 |         11 |          7 |         64 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/home_screen.dart                       | Dart     |        112 |         -1 |         -1 |        110 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/search_screen.dart                     | Dart     |         83 |          1 |          3 |         87 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/screens/splash_screen.dart                     | Dart     |         41 |          0 |          3 |         44 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/services/openweather/geo_coding_api.dart       | Dart     |        -36 |          0 |         -2 |        -38 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/services/openweather/weather_forecast_api.dart | Dart     |        -51 |         -5 |         -6 |        -62 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/api_exception.dart                       | Dart     |          5 |          0 |          2 |          7 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/utils/di.dart                                  | Dart     |         11 |          0 |          2 |         13 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/cached_icon.dart                       | Dart     |          7 |          0 |          0 |          7 |
+| /Users/saleh/Desktop/ZarinPal Project/weather_forecast/weather_forecast_app_zarinpal/lib/src/widgets/search_box.dart                        | Dart     |        -36 |         -4 |         -3 |        -43 |
+| Total                                                                                                                                       |          |        616 |         22 |         80 |        718 |
++---------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
