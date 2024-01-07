@@ -429,7 +429,6 @@ class _HomeScreenState extends State<HomeScreen> {
   double _getToolBarHeight() {
     final deviceOrientation = MediaQuery.of(context).orientation;
     final deviceScreensize = MediaQuery.of(context).size;
-    final devicePlatform = Platform.isIOS;
     return deviceOrientation == Orientation.landscape
         ? deviceScreensize.height * 0.2
         : deviceScreensize.height * 0.08;
