@@ -9,10 +9,9 @@ abstract class ICityRemoteDataSource {
 }
 
 class CityRemoteDataSource implements ICityRemoteDataSource {
+  final Dio _dio = locator.get();
   @override
   Future<List<City>> findMatchedCities(String keyword) async {
-   
-    final Dio _dio = locator.get();
     try {
       var response = await _dio.get(
         APIConfig.GeocodingAPISuffix,

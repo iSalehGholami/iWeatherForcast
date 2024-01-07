@@ -16,7 +16,8 @@ class CityLocalDataSource implements ICityLocalDataSource {
     try {
       return _citiesBox.values.toList();
     } on Exception catch (ex) {
-      throw ex;
+      print(ex);
+      rethrow;
     }
   }
 
@@ -25,7 +26,8 @@ class CityLocalDataSource implements ICityLocalDataSource {
     try {
       await _citiesBox.add(city);
     } on Exception catch (ex) {
-      throw ex;
+      print(ex);
+      rethrow;
     }
   }
 
@@ -34,7 +36,8 @@ class CityLocalDataSource implements ICityLocalDataSource {
     try {
       await _citiesBox.delete(city.key);
     } on Exception catch (ex) {
-      throw ex;
+      print(ex);
+      rethrow;
     }
   }
 }

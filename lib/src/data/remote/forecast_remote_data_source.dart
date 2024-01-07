@@ -33,7 +33,9 @@ class ForecastRemoteDataSource extends IForecastRemoteDataSource {
 
       return forecasts;
     } on DioException catch (ex) {
-      throw DioException(requestOptions: ex.requestOptions);
+      print(ex.message);
+      throw ApiException(ex.response?.statusCode ?? 400,
+          ex.response?.statusMessage ?? "Exception doesn't have a response");
     } on Exception catch (ex) {
       throw Exception(ex);
     }

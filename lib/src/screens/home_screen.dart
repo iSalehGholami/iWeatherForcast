@@ -1,9 +1,9 @@
+import 'dart:io' show Platform;
 import 'package:country_flags/country_flags.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/city/city_bloc.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/city/city_event.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/forecast/forecast_bloc.dart';
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return BlocBuilder<ForecastBloc, ForecastState>(
       builder: (context, state) {
         return Container(
-          decoration: BoxDecoration(gradient: ColorPack.darkPurpleGradient),
+          decoration: const BoxDecoration(gradient: ColorPack.darkPurpleGradient),
           child: Scaffold(
             backgroundColor: Colors.transparent,
             body: _getBody(context, state),
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  RefreshIndicator _getBody(BuildContext context, ForecastState state) {
+  Widget _getBody(BuildContext context, ForecastState state) {
     return RefreshIndicator(
       onRefresh: () async {
         BlocProvider.of<ForecastBloc>(context).add(ForecastCheckAllCitiesRequest());
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             )
           },
-          SliverPadding(
+          const SliverPadding(
             padding: EdgeInsets.only(bottom: 100),
           ),
         ],
@@ -75,52 +75,62 @@ class _HomeScreenState extends State<HomeScreen> {
 
   SliverAppBar _getAppBar(BuildContext context) {
     return SliverAppBar(
-      toolbarHeight: MediaQuery.of(context).orientation == Orientation.landscape ? 120 : 70,
+      toolbarHeight: _getToolBarHeight(),
       backgroundColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
-        background: Container(
-            decoration: BoxDecoration(
-              gradient: ColorPack.lightPurpleGradient,
-              borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
-              ),
-              border: Border.all(
-                width: 2,
-                color: Colors.black,
-              ),
+        titlePadding: const EdgeInsets.symmetric(horizontal: 2),
+        title: Container(
+          decoration: BoxDecoration(
+            gradient: ColorPack.lightPurpleGradient,
+            borderRadius: const BorderRadius.only(
+              bottomRight: Radius.circular(20),
+              bottomLeft: Radius.circular(20),
             ),
-            child: Stack(
-              alignment: AlignmentDirectional.center,
-              children: [
-                Positioned(
-                  top: 55,
-                  child: Text(
-                    "iWeatherForecast",
-                    style: TextStyle(
-                      color: ColorPack.pink,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: GoogleFonts.theGirlNextDoor().fontFamily,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+            border: Border.all(
+              width: 2,
+              color: Colors.black,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment:
+                Platform.isIOS ? MainAxisAlignment.center : MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(
+                width: double.infinity,
+              ),
+              // Quick fix for new ios devices (14Pro,15,... dynamic island)
+              if (Platform.isIOS &&
+                  MediaQuery.of(context).orientation != Orientation.landscape) ...{
+                const SizedBox(height: 54),
+              },
+              const Text(
+                "iWeatherForecast",
+                style: TextStyle(
+                  color: ColorPack.pink,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "roboto",
                 ),
-                Positioned(
-                  bottom: 15,
-                  child: Text(
-                    "by SGSOFT",
-                    style: TextStyle(),
-                  ),
+                textAlign: TextAlign.center,
+              ),
+              const Text(
+                "by SGSOFT",
+                style: TextStyle(
+                  fontSize: 12,
+                  fontFamily: "roboto",
                 ),
-              ],
-            )),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 
   SliverPadding _getReloadingIndicator() {
-    return SliverPadding(
+    return const SliverPadding(
       padding: EdgeInsets.symmetric(
         horizontal: 20,
         vertical: 30,
@@ -170,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return await _showConfirmationDialog(context, forecastList[index]);
       },
       crossAxisEndOffset: 0,
-      movementDuration: Duration(milliseconds: 500),
+      movementDuration: const Duration(milliseconds: 500),
       dragStartBehavior: DragStartBehavior.start,
       background: _getBackground(forecastList[index]),
       key: ValueKey<Forecast>(forecastList[index]),
@@ -189,11 +199,10 @@ class _HomeScreenState extends State<HomeScreen> {
         border: Border.all(width: 2),
         boxShadow: [
           BoxShadow(
-            color: ColorPack.purple1,
+            color: ColorPack.purple1.withOpacity(0.7),
             spreadRadius: 0.3,
             blurRadius: 30,
-            blurStyle: BlurStyle.outer,
-            offset: Offset(0, 9),
+            offset: const Offset(0, 9),
           ),
         ],
       ),
@@ -228,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(12),
       ),
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       alignment: Alignment.centerLeft,
       child: Container(
         height: 100,
@@ -241,10 +250,10 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(
+            const Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: 20),
                 child: Icon(
                   Icons.delete,
                   color: Colors.white,
@@ -258,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Text(
                   "Delete \"${forecast.city.name}\" from the list",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'monospace',
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -295,22 +304,22 @@ class _HomeScreenState extends State<HomeScreen> {
           width: MediaQuery.of(context).size.width * 0.4,
           child: Text(
             forecast.city.name,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
               overflow: TextOverflow.ellipsis,
-              fontFamily: GoogleFonts.chelseaMarket().fontFamily,
+              fontFamily: "cm",
             ),
           ),
         ),
         SizedBox(
           child: Text(
             forecast.datetime.getCurrentTime(),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
               overflow: TextOverflow.clip,
-              fontFamily: GoogleFonts.chelseaMarket().fontFamily,
+              fontFamily: "cm",
             ),
           ),
         ),
@@ -330,17 +339,17 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Text(
             "${forecast.temperature.roundTempString()}°",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              fontFamily: GoogleFonts.chelseaMarket().fontFamily,
+              fontFamily: "cm",
             ),
           ),
           Text(
             "${forecast.humidity.toString()}%",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 13,
-              fontFamily: GoogleFonts.chelseaMarket().fontFamily,
+              fontFamily: "cm",
             ),
           ),
         ],
@@ -376,24 +385,24 @@ class _HomeScreenState extends State<HomeScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          title: Text("Delete Confirmation"),
+          title: const Text("Delete Confirmation"),
           content: Text("Are you sure you want to delete \"${selectedForecast.city.name}?\""),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop(false); // Cancel deletion
               },
-              child: Text("Cancel"),
               style: TextButton.styleFrom(
                 backgroundColor: ColorPack.darkpurple1,
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
-                fixedSize: Size(100, 20),
+                fixedSize: const Size(100, 20),
               ),
+              child: const Text("Cancel"),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop(true); // Confirm deletion
@@ -404,9 +413,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
-                fixedSize: Size(100, 20),
+                fixedSize: const Size(100, 20),
               ),
-              child: Text(
+              child: const Text(
                 "Delete",
                 overflow: TextOverflow.ellipsis,
               ),
@@ -415,5 +424,14 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
+  }
+
+  double _getToolBarHeight() {
+    final deviceOrientation = MediaQuery.of(context).orientation;
+    final deviceScreensize = MediaQuery.of(context).size;
+    final devicePlatform = Platform.isIOS;
+    return deviceOrientation == Orientation.landscape
+        ? deviceScreensize.height * 0.2
+        : deviceScreensize.height * 0.08;
   }
 }

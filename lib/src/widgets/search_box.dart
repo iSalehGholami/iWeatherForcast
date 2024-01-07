@@ -31,11 +31,11 @@ class _SearchBoxState extends State<SearchBox> {
         border: Border.all(width: 2),
         borderRadius: BorderRadius.circular(20),
       ),
-      margin: EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: Icon(
               Icons.search,
               size: 30,
@@ -44,7 +44,7 @@ class _SearchBoxState extends State<SearchBox> {
           ),
           Expanded(
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 focusedBorder: InputBorder.none,
                 focusedErrorBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,
@@ -59,11 +59,11 @@ class _SearchBoxState extends State<SearchBox> {
                   () async {
                     if (RegExp(r"^[a-zA-Z]+(?:[ \t][a-zA-Z]+)*$", caseSensitive: false)
                             .hasMatch(text) &&
-                        text.length != 0) {
+                        text.isNotEmpty) {
                       BlocProvider.of<CityBloc>(context).add(
                         FetchMatchedCitiesEvent(widget._searchController.text),
                       );
-                    } else if (text.length < 1) {
+                    } else if (text.isEmpty) {
                       BlocProvider.of<CityBloc>(context).add(ClearCurrentEvent());
                     }
                   },

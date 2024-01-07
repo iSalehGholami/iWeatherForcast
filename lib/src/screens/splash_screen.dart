@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_forecast_app_zarinpal/src/constants/const.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -12,7 +11,7 @@ class SplashScreen extends StatelessWidget {
     final Orientation deviceOrientation = MediaQuery.of(context).orientation;
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: ColorPack.darkPurpleGradient,
       ),
       child: Scaffold(
@@ -34,7 +33,7 @@ class SplashScreen extends StatelessWidget {
   }
 
   SizedBox _getSpinner() {
-    return SizedBox(
+    return const SizedBox(
       child: SpinKitWave(
         color: ColorPack.pink,
         size: 80,
@@ -59,10 +58,10 @@ class SplashScreen extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             "Coder: SGSOFT",
-            style: TextStyle(fontFamily: GoogleFonts.roboto().fontFamily, fontSize: 18),
+            style: TextStyle(fontFamily: 'robotomono', fontSize: 18),
           ),
         ),
       ),

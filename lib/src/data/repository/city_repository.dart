@@ -1,3 +1,5 @@
+// ignore_for_file: void_checks
+
 import 'package:dartz/dartz.dart';
 import 'package:weather_forecast_app_zarinpal/src/data/local/city_local_data_source.dart';
 import 'package:weather_forecast_app_zarinpal/src/data/models/city_model.dart';

@@ -24,7 +24,7 @@ void main() async {
           value: ForecastBloc(),
         ),
       ],
-      child: MainApp(),
+      child: const MainApp(),
     ),
   );
 }
@@ -47,7 +47,7 @@ class _MainAppState extends State<MainApp> {
   }
 
   void _startLoadingTimer() {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       setState(() {
         isLoading = false;
       });
@@ -61,7 +61,8 @@ class _MainAppState extends State<MainApp> {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home: isLoading ? SplashScreen() : _homeBuilder(),
+      home: isLoading ? const SplashScreen() : _homeBuilder(),
+      title: "iWeather Forecast",
     );
   }
 
@@ -75,7 +76,7 @@ class _MainAppState extends State<MainApp> {
               Expanded(
                 child: IndexedStack(
                   index: index,
-                  children: [
+                  children: const [
                     HomeScreen(),
                     SearchScreen(),
                   ],
@@ -96,7 +97,7 @@ class _MainAppState extends State<MainApp> {
     return Container(
       width: MediaQuery.of(context).size.width * 0.45,
       height: 50,
-      margin: EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric(
         vertical: 30,
       ),
       decoration: BoxDecoration(
@@ -115,22 +116,22 @@ class _MainAppState extends State<MainApp> {
     );
   }
 
-  Widget _generateNavButton(IconData icon, _index) {
+  Widget _generateNavButton(IconData icon, int currentIndex) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         foregroundColor: ColorPack.bravoBlue,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
       ),
       onPressed: () {
         setState(() {
-          index = _index;
+          index = currentIndex;
         });
       },
       child: Icon(
         icon,
-        color: index == _index
+        color: index == currentIndex
             ? ColorPack.pink
             : MediaQuery.of(context).platformBrightness == Brightness.dark
                 ? ColorPack.bravoBlue

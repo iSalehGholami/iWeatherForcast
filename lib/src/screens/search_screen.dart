@@ -2,7 +2,6 @@ import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/city/city_bloc.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/city/city_event.dart';
 import 'package:weather_forecast_app_zarinpal/src/bloc/city/city_state.dart';
@@ -11,7 +10,7 @@ import 'package:weather_forecast_app_zarinpal/src/data/models/city_model.dart';
 import 'package:weather_forecast_app_zarinpal/src/widgets/search_box.dart';
 
 class SearchScreen extends StatefulWidget {
-  SearchScreen({super.key});
+  const SearchScreen({super.key});
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -28,7 +27,7 @@ class _SearchScreenState extends State<SearchScreen> {
           searchController.clear();
         }
         return Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: ColorPack.darkPurpleGradient,
           ),
           child: Scaffold(
@@ -53,7 +52,7 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ),
         if (state is CityLoadingState) ...{
-          SliverPadding(
+          const SliverPadding(
             padding: EdgeInsets.symmetric(
               horizontal: 20,
               vertical: 10,
@@ -81,7 +80,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   SliverPadding _addedPopupDialog(CityDoneState state) {
     return SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       sliver: SliverToBoxAdapter(
         child: Container(
           width: double.infinity,
@@ -97,7 +96,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                 child: Text(
                   state.message,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -112,23 +111,23 @@ class _SearchScreenState extends State<SearchScreen> {
                   onPressed: () {
                     BlocProvider.of<CityBloc>(context).add(ClearCurrentEvent());
                   },
-                  child: Text("OK"),
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
                     backgroundColor: ColorPack.purple1,
-                    textStyle: TextStyle(
-                      fontFamily: GoogleFonts.roboto().fontFamily,
+                    textStyle: const TextStyle(
+                      fontFamily: 'roboto',
                       fontSize: 20,
                     ),
-                    fixedSize: Size(120, 60),
+                    fixedSize: const Size(120, 60),
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
+                      side: const BorderSide(
                         width: 2,
                         color: Colors.black,
                       ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
+                  child: const Text("OK"),
                 ),
               )
             ],
@@ -203,7 +202,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 children: [
                   Text(
                     matchedCities[index].name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -211,7 +210,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   Text(
                     matchedCities[index].state,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                     overflow: TextOverflow.ellipsis,
@@ -221,7 +220,7 @@ class _SearchScreenState extends State<SearchScreen> {
             )
           : Text(
               matchedCities[index].name,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),

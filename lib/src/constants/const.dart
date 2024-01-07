@@ -1,18 +1,17 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Constants {}
 
 class APIConfig extends Constants {
-  static final String BaseAPIUrl = "https://api.openweathermap.org";
-  static final String GeocodingAPISuffix = "/geo/1.0/direct";
-  static final String WeatherForecastAPISuffix = "/data/2.5/weather";
-  static final String APIKey = "19aea58fbd4fa88710c98bc4589603a5";
-  static final String IconUrlPrefix = "https://openweathermap.org/img/wn/";
-  static final String IconUrlSuffix = "@2x.png";
+  static const String BaseAPIUrl = "https://api.openweathermap.org";
+  static const String GeocodingAPISuffix = "/geo/1.0/direct";
+  static const String WeatherForecastAPISuffix = "/data/2.5/weather";
+  static const String APIKey = "19aea58fbd4fa88710c98bc4589603a5";
+  static const String IconUrlPrefix = "https://openweathermap.org/img/wn/";
+  static const String IconUrlSuffix = "@2x.png";
 }
 
 class ColorPack extends Constants {
@@ -49,7 +48,7 @@ class AppTheme extends Constants {
     swapLegacyOnMaterial3: true,
     useMaterial3: true,
     scheme: FlexScheme.deepBlue,
-    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontFamily: 'roboto',
   );
 
   /// Dark Theme
@@ -60,6 +59,6 @@ class AppTheme extends Constants {
     dialogBackground: Colors.grey.shade900,
     scheme: FlexScheme.indigo,
     tabBarStyle: FlexTabBarStyle.forBackground,
-    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontFamily: 'roboto',
   );
 }

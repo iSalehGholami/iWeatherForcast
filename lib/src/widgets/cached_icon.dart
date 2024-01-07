@@ -16,7 +16,7 @@ class CachedIcon extends StatelessWidget {
         imageUrl: "${APIConfig.IconUrlPrefix}${iconId ?? '01d'}${APIConfig.IconUrlSuffix}",
         placeholder: (context, url) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: ColorPack.darkPurpleGradient,
             ),
           );
@@ -24,10 +24,10 @@ class CachedIcon extends StatelessWidget {
         errorWidget: (context, url, error) => Container(
           width: 20,
           height: 20,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: ColorPack.darkPurpleGradient,
           ),
-          child: Center(
+          child: const Center(
             child: Text("❌"),
           ),
         ),

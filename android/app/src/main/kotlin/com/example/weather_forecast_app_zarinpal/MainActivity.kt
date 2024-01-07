@@ -1,4 +1,4 @@
-package com.example.weather_forecast_app_zarinpal
+package com.sgsoft.iweather_forecast
 
 import io.flutter.embedding.android.FlutterActivity
 
