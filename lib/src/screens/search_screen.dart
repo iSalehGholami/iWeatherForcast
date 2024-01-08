@@ -192,39 +192,33 @@ class _SearchScreenState extends State<SearchScreen> {
   Padding _getCityInfo(List<City> matchedCities, int index, BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: matchedCities[index].state != ""
-          ? SizedBox(
-              width: MediaQuery.of(context).size.width * 0.6,
-              height: 80,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    matchedCities[index].name,
-                    style: const TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Text(
-                    matchedCities[index].state,
-                    style: const TextStyle(
-                      fontSize: 18,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            )
-          : Text(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 0.6,
+        height: 80,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
               matchedCities[index].name,
               style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
+              overflow: TextOverflow.ellipsis,
             ),
+            if (matchedCities[index].state != "") ...{
+              Text(
+                matchedCities[index].state,
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+                overflow: TextOverflow.ellipsis,
+              ),
+            }
+          ],
+        ),
+      ),
     );
   }
 }
