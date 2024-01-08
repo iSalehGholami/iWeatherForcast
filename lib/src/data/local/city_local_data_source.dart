@@ -15,8 +15,7 @@ class CityLocalDataSource implements ICityLocalDataSource {
   Future<List<City>> getSelectedCities() async {
     try {
       return _citiesBox.values.toList();
-    } on Exception catch (ex) {
-      print(ex);
+    } on Exception {
       rethrow;
     }
   }
@@ -25,8 +24,7 @@ class CityLocalDataSource implements ICityLocalDataSource {
   Future<void> saveSelectedCity(City city) async {
     try {
       await _citiesBox.add(city);
-    } on Exception catch (ex) {
-      print(ex);
+    } on Exception {
       rethrow;
     }
   }
@@ -35,8 +33,7 @@ class CityLocalDataSource implements ICityLocalDataSource {
   Future<void> removeSelectedCity(City city) async {
     try {
       await _citiesBox.delete(city.key);
-    } on Exception catch (ex) {
-      print(ex);
+    } on Exception {
       rethrow;
     }
   }
